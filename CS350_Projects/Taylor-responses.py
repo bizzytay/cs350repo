@@ -1,4 +1,4 @@
-"""Taylor Herrera"""
+"""Taylor Herrera 10/23/2016"""
 #Version Python 3 
 
 
@@ -56,16 +56,17 @@ def main():
 	
 	while 1:
 
-		choice = input("Who would you like to talk first? (Hillary or Trump) **case sensitive**: ")
+		choice = input("Who would you like to respond? (Hillary or Trump): ")
 		
-		if choice == "Trump":
+		if choice in ("Trump","trump","t","T"):
 			ask = input("What would you like to ask? ")
 			trump = talker("Trump", t_responses[random.randint(0,t_len)])
 			print("\nThe speaker is: ",trump.get_name(),"\n")
 			print(trump.get_name(),"says: ",trump.get_vocab(),"\n")
 
+
 		
-		if choice == "Hillary":
+		if choice in("Hillary","hillary","h","H"):
 			ask = input("What would you like to ask? ")
 			hillary = talker("Hillary", h_responses[random.randint(0,h_len)])
 			print("\nThe speaker is: ",hillary.get_name(),"\n")
